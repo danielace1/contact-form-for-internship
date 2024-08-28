@@ -8,6 +8,7 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use(express.urlencoded({ extended: false }));
 app.use("/", router);
 app.get("/", (req, res) => {
   res.send("Welcome to the API!");
